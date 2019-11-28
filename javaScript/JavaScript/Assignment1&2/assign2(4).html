@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circumference</title>
+</head>
+<body>
+    <script>
+        //named function
+    function circum(rad)
+    {   var pi=3.14;
+        console.log('circumference of circle = ',2*pi*rad);
+    }
+    circum(3);
+//function expression
+var circumf = function(rad)
+{
+    var pi=3.14;
+    var circumference=2*pi*rad;
+    return circumference;
+    }
+   var value =  circumf(5);
+   console.log('circumference of circle = ',value);
+    //self invoked function
+    
+        (function(rad)
+        {
+            var pi=3.14;
+            console.log('circumference of circle=',2*pi*rad);
+        })
+        (4)
+        //Fat Arrow Function
+        var circum = rad => {
+            var pi = 3.14;
+            console.log('circumference of circle = ',2*pi*rad);
+        }
+        circum(6);
+    </script>
+</body>
+</html>

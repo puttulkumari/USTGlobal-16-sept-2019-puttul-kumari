@@ -1,0 +1,47 @@
+<!-- <p>form2 works!</p> -->
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" 
+#form="ngForm" (ngSubmit)="addRequired(form)">
+<h1 class="text-center bg-dark text-white">Form-2</h1>
+<div class="form-group">
+    <input type="Candidate Name" name="Candidate Name"
+     id="Candidate Name" class="form-group" placeholder="Candidate Name">
+</div>
+<div class="form-group">
+    <input type="year of experience" name="year of experience"
+     id="year of experience" class="form-group" 
+     placeholder="year of experience ">
+</div>
+<label>Skills</label><br>
+<label>java</label>
+<input type="radio" name="Skills" id="java">
+    &nbsp;&nbsp;
+<label>Angular</label>
+<input type="radio" name="Skills" id="Angular">
+&nbsp;&nbsp;
+<label>SQL</label>
+<input type="radio" name="Skills" id="SQL">
+&nbsp;&nbsp;
+<label>Spring</label>
+<input type="radio" name="Skills" id="Spring">
+<div class="form-group">
+    <input type="CCTC" name="CCTC"
+     id="CCTC" class="form-group" 
+     placeholder="CCTC">
+</div>
+<div class="form-group">
+    <input type="ECTC" name="ECTC"
+     id="ECTC" class="form-group" 
+     placeholder="ECTC">
+</div>
+
+<div class="form-group">
+    <input type="Ready to Relocate" name="Ready to Relocate"
+     id="Ready to Relocate" class="form-group" 
+     placeholder="Ready to Relocate">
+</div>
+
+<div class="form-check">
+    <input class = "form-check-input" type="checkbox">
+    <label class="form-check-label">Schedule Interview</label>
+</div>
+</form>

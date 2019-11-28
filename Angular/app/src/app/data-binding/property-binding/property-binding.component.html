@@ -1,0 +1,40 @@
+<h1 [innerText]="name"></h1>
+<img [src]="imgUrl" alt="" [class.rounded-circle]="isActive">
+<h1 [style.color] = "colorName" [class.bg-dark]=
+"isActive" [class.bg-primary]="!isActive">{{address}}</h1>
+<table class="table table-dark table-bordered table-striped">
+    <!-- to keep space in 
+    between we use this thing the way of writing so that table will 
+    come in good manner -->
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <!-- <th colspan="2">Contact no</th> -->
+            <th [attr.colspan]="colSpanValue">Contact Number</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mikel</td>
+            <td>24</td>
+            <td>388560368502</td>
+            <td>760967029769</td>
+        </tr>
+        <tr>
+            <td>Puttul</td>
+            <td>22</td>
+            <td>84642894640</td>
+            <td>40870979704</td>
+        </tr>
+        
+        <tr>
+            <td>Yash</td>
+            <td>28</td>
+            <td>69768843946</td>
+            <td>58573876494</td>
+        </tr>
+    </tbody>
+</table>

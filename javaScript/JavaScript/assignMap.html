@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map</title>
+</head>
+<body>
+    <script>
+        const items=[{
+            name: 'Earing',
+            id: 1,
+            price: 2000
+        },{
+            name: 'kajal',
+            id: 2,
+            price: 1000
+        },{
+            name: 'Beardo',
+            id: 3,
+            price: 120
+        }]
+        const item=items.map(items=>items.price+300);
+        console.log('after map arrow function',item);
+        const obj=items.filter(items=>items.price>3000);
+        console.log('after filter arrow function',obj);
+    //    const updatedItem =  items.map(function(item,index)
+    //     {
+    //         item.price = item.price + 300
+    //         return item
+    //     })
+    //    const itemsArrow =  items.map((value)=>{
+    //         value.price = value.price + 300
+    //         return value
+    //     })
+    //     const filteredItems = items.filter((item)=>item.price>1000)
+    
+        </script>
+</body>
+</html>

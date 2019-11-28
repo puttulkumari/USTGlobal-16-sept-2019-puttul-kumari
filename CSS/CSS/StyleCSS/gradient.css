@@ -1,0 +1,6 @@
+#grad{
+    height: 600px;
+    background:radial-gradient(red,black,blue,green)
+    background-image : url("/image/")
+    
+}

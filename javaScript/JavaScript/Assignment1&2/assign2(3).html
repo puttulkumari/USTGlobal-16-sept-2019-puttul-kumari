@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prime</title>
+</head>
+<body>
+    <script>
+        //named function
+        function prime(n)
+        {
+            if(n===1)
+            {
+                return false;
+            }
+            else if(n===2)
+            {
+                return true;
+            }else{
+                for(var x=2;x<n;x++)
+                {
+                    if(n%x===0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        console.log(prime(37));
+        prime(37);
+        //function expression
+        var prime1=function(num)
+        
+            {
+            if(n===1)
+            {
+                return false;
+            }
+            else if(n===2)
+            {
+                return true;
+            }else{
+                for(var x=2;x<n;x++)
+                {
+                    if(n%x===0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        console.log(prime(66));  
+        var prime1=prime(66);
+        //self invoked function
+        (function(num)
+        {
+            if(n===1)
+            {
+                return false;
+            }
+            else if(n===2)
+            {
+                return true;
+            }else{
+                for(var x=2;x<n;x++)
+                {
+                    if(n%x===0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        })
+        console.log(prime(66));
+        (66);
+        //Fat arrow function
+        var prime2=n=>
+        {
+            if(n===1)
+            {
+                return false;
+            }
+            else if(n===2)
+            {
+                return true;
+            }else{
+                for(var x=2;x<n;x++)
+                {
+                    if(n%x===0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        console.log(prime(66)); 
+        prime2(66);
+
+        
+        </script>
+</body>
+</html>

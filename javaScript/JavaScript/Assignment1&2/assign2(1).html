@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Factorial</title>
+</head>
+<body>
+    <script>
+        //named function
+        var fact=1;
+        function fact1(num1)
+        {
+            for(var i=num1;i>0;i--)
+            {
+                fact=fact*i;
+            }
+            console.log('fact=',fact);
+        }fact1(8);
+        //function expression
+        var fact=1;
+        var fact2=function(num1)
+        {
+            for(var i=num1;i>0;i--)
+            {
+                fact=fact*i;
+            }
+            console.log('fact=',fact);
+        }
+        fact2(9);
+        //self invoked function
+        var fact=1;
+        (function(num1)
+        {
+            for(var i=num1;i>0;i--)
+            {
+                fact=fact*i;
+            }
+            console.log('fact=',fact);
+        })
+        (9);
+        //Fat arrow function
+        var fact=1;
+        var fac=(num1)=>{
+            for(var i=num1;i>0;i--)
+            {
+                fact=fact*i;
+
+            }
+            console.log('fact=',fact);
+        }
+        fac(9);
+        
+        </script>
+</body>
+</html>

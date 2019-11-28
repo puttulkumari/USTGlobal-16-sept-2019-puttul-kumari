@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        //named function
+        function add(arr)
+        {
+            var sum = 0;
+            for(i=0;i<arr.length;i++)
+            {
+                sum = sum+arr[i];
+            }
+            console.log(sum);
+        }
+        add([1,2,3,4,5])
+        </script>
+        <script>
+        //Function expression
+        var add = function(arr)
+        {
+            var sum = 0;
+            for(i=0;i<arr.length;i++)
+            {
+                sum = sum+arr[i];
+                
+            }
+            return sum
+        }
+        console.log(add([1,2,3,4,5]))
+        </script>
+        <script>
+        //self invoked function
+        (function(arr){
+            var sum = 0
+            for(i=0;i<arr.length;i++)
+            {
+            sum = sum+arr[i];
+        }
+
+        console.log(sum)
+    })
+    ([1,2,3,4,5])
+</script>
+//Fat Arrow function
+<script>
+    var add = arr=>{
+        var sum = 0;
+        for(i=0;i<arr.length;i++)
+            {
+            sum = sum+arr[i];
+        }
+        return sum;
+    }
+    add([1,2,3,4,5]);
+</script> 
+    </body>
+</html>
