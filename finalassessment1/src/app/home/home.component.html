@@ -1,0 +1,166 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">Add Product</h1>
+    <div class="form-group">
+        <label for="">Product Id</label>
+        <input type="number" name="pid" id="pid" class="form-control" placeholder="Id.........." #pid="ngModel"
+            ngModel required>
+        <div *ngIf="pid.touched && pid.invalid">
+            <p class="alert alert-danger" *ngIf="pid.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Product Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Product Name..." #name="ngModel"
+            ngModel required>
+        <div *ngIf="name.touched && name.invalid">
+            <p class="alert alert-danger" *ngIf="name.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Catogory
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Grosseries</a>
+          <a class="dropdown-item" href="#">Cosmectices</a>
+          <a class="dropdown-item" href="#">Stationary</a>
+          <a class="dropdown-item" href="#">Snacks</a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Company</label>
+        <input type="text" name="company" id="company" class="form-control" placeholder="Enter Company..." #company="ngModel"
+            ngModel required>
+        <div *ngIf="company.touched && company.invalid">
+            <p class="alert alert-danger" *ngIf="company.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Quantity</label>
+        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Enter quantity..." #quantity="ngModel"
+            ngModel required>
+        <div *ngIf="quantity.touched && quantity.invalid">
+            <p class="alert alert-danger" *ngIf="quantity.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Price</label>
+        <input type="number" name="price" id="price" class="form-control" placeholder="Enter Price..." #price="ngModel"
+            ngModel required>
+        <div *ngIf="price.touched && price.invalid">
+            <p class="alert alert-danger" *ngIf="price.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Product</button>
+    </div>
+</form>
+
+
+<table class="table table-bordered table-striped table-dark col-md-8 offset-2">
+
+    <thead>
+       <tr>
+            <th>Pid</th>
+            <th>Name</th>
+            <th>Catogory</th>
+            <th>Company</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of Users">
+            <td>{{user.pid}}</td>
+            <td>{{user.name| uppercase}}</td>
+            <td>{{user.catogory}}</td>
+            <td>{{user.company}}</td>
+            <td>{{user.quantity}}</td>
+            <td>{{user.price}}</td>
+        <td>
+              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="selectUser(user)">
+         Update Product    
+
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" *ngIf="selectedUser">
+                    <form action="" class="" #form="ngForm" (ngSubmit)="updateData(form)">
+                            
+                        <h1 class="text-center bg-dark text-white">Update Product</h1>
+    <div class="form-group">
+        <label for="">Product Id</label>
+        <input type="number" name="pid" id="pid" class="form-control" placeholder="Id.........." #pid="ngModel"
+            ngModel required>
+        <div *ngIf="pid.touched && pid.invalid">
+            <p class="alert alert-danger" *ngIf="pid.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Product Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Product Name..." #name="ngModel"
+            ngModel required>
+        <div *ngIf="name.touched && name.invalid">
+            <p class="alert alert-danger" *ngIf="name.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Catogory</label>
+        <input type="text" name="catogory" id="catogory" class="form-control" placeholder="Enter catogory" #catogory="ngModel"
+            ngModel required>
+        <div *ngIf="catogory.touched && catogory.invalid">
+            <p class="alert alert-danger" *ngIf="catogory.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Company</label>
+        <input type="text" name="company" id="company" class="form-control" placeholder="Enter Company..." #company="ngModel"
+            ngModel required>
+        <div *ngIf="company.touched && company.invalid">
+            <p class="alert alert-danger" *ngIf="company.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Quantity</label>
+        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Enter quantity..." #quantity="ngModel"
+            ngModel required>
+        <div *ngIf="quantity.touched && quantity.invalid">
+            <p class="alert alert-danger" *ngIf="quantity.errors.required">*this field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Price</label>
+        <input type="number" name="price" id="price" class="form-control" placeholder="Enter Price..." #price="ngModel"
+            ngModel required>
+        <div *ngIf="price.touched && price.invalid">
+            <p class="alert alert-danger" *ngIf="price.errors.required">*this field is required</p>
+        </div>
+    </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-success float-right"[disabled] = "form.invalid">Update</button>
+                            </div>
+                        </form>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+            </td>
+            <td>
+                <button (click)="deleteData(user)" type="button" class="btn btn-outline-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
